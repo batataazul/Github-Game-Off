@@ -43,8 +43,8 @@ tracks/1/keys = {
 
 [node name="Bullet" type="RigidBody2D"]
 material = SubResource( 1 )
-collision_layer = 2
-collision_mask = 2
+collision_layer = 4
+collision_mask = 8
 mass = 0.000111111
 physics_material_override = SubResource( 7 )
 continuous_cd = 2

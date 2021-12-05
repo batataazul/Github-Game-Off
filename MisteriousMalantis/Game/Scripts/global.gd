@@ -3,7 +3,8 @@ extends Node
 # Sound Control
 var sound_on = true
 var sound_level = 100
-
+var enemy_level = 0
+var enemy_speed = 300
 #score
 var score = 0
 
@@ -22,3 +23,19 @@ func resetScore():
 
 func getScore():
 	return score
+
+func enemyLevelUp():
+	enemy_level += 1
+
+func setEnemySpeed(speed):
+	enemy_speed = speed
+	
+func addEnemySpeed(speed):
+	enemy_speed += speed
+
+func getEnemySpeed():
+	return enemy_speed
+
+func resetEnemy():
+	enemy_level = 0
+	enemy_speed = 300
