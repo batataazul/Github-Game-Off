@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mixkit-infected-vibes-157.mp3-f743acc7a45cfc30be810205f9d57dd5.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/mixkit-infected-vibes-157.mp3"
+dest_files=[ "res://.import/mixkit-infected-vibes-157.mp3-f743acc7a45cfc30be810205f9d57dd5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
