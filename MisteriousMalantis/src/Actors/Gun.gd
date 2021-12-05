@@ -15,14 +15,16 @@ onready var timer = $Cooldown
 func shoot(direction = 1, mouse_position = 0):
 	if not timer.is_stopped():
 		return false
-	var bullet = Bullet.instance()
-	bullet.global_position = global_position
-	# var bulletAngle = bullet.global_position.angle_to(mouse_position)
-	var vectorDirection = bullet.global_position.direction_to(mouse_position)
-	# print(vectorDirection[0])
-	bullet.linear_velocity = Vector2(vectorDirection[0] * BULLET_VELOCITY, vectorDirection[1] * BULLET_VELOCITY)
+	else:
+		timer.start()
+		var bullet = Bullet.instance()
+		bullet.global_position = global_position
+		# var bulletAngle = bullet.global_position.angle_to(mouse_position)
+		var vectorDirection = bullet.global_position.direction_to(mouse_position)
+		# print(vectorDirection[0])
+		bullet.linear_velocity = Vector2(vectorDirection[0] * BULLET_VELOCITY, vectorDirection[1] * BULLET_VELOCITY)
+		bullet.set_as_toplevel(true)
+		add_child(bullet)
+		sound_shoot.play()
 
-	bullet.set_as_toplevel(true)
-	add_child(bullet)
-	sound_shoot.play()
 	return true

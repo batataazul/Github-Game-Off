@@ -80,7 +80,7 @@ func _physics_process(_delta):
 	# There are many situations like these where you can reuse existing properties instead of
 	# creating new variables.
 	var is_shooting = false
-	if Input.is_action_just_pressed("shoot" + action_suffix):
+	if Input.is_action_pressed("shoot" + action_suffix):
 		var mouse_position = get_global_mouse_position() # Getting Cursor Position
 		# var angle = mouse_postion.angle_to_point(Gun.global_position)
 		is_shooting = gun.shoot(sprite.scale.x, mouse_position)
